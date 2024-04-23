@@ -60,7 +60,7 @@ def detect(model, lm_list):
     lm_list = numpy.expand_dims(lm_list, axis=0)
     result = model.predict(lm_list)
     if result[0][0] > 0.5:
-        label = "neutral"
+        label = "violent"
     else:
         label = "neutral"
     return str(label)
